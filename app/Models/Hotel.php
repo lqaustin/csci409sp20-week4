@@ -13,7 +13,7 @@ class Hotel extends Model
 		'description',
 		'image'
 		'address_2',
-		'city',
+		'city', 
 		'state',
 		'zip'
 	];
