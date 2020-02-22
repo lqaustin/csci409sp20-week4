@@ -1,5 +1,6 @@
 <?php
-use App\Models\Room;
+//Load Room Model
+use app\Models\Room;
 
 use Illuminate\Database\Seeder;
 
