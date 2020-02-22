@@ -53,7 +53,7 @@ class RoomsTableSeeder extends Seeder
             ],
 		];
 		foreach ($rooms as $room) {
-            Rooms::create(array(
+            Room::create(array(
                 'hotel_id' => $room['hotel_id'],
                 'type' => $room['type'],
                 'description' => $room['description'],
