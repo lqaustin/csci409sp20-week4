@@ -15,10 +15,10 @@ class Reservations extends Model
 		'departure'
 	];
 	
-	public function rooms() {
-		return $this->hasOne('App\Models\Room');
+	public function room() {
+		return $this->belongsTo('App\Models\Room');
 	}
-	public function users() {
-		return $this->hasOne('App\User');
+	public function user() {
+		return $this->belongsTo('App\User');
 	}
 }
