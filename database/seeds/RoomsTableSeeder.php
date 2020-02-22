@@ -47,6 +47,16 @@ class RoomsTableSeeder extends Seeder
 				'description' => 'International luxurious hotel.',
 				'price' => '599.99',
 				'image' => 'https://placeimg.com/640/480/arch'
-            ]
-		]    
+            ],
+		];
+		foreach ($rooms as $room) {
+            Room::create(array(
+                'hotel_id' => $room['hotel_id'],
+                'type' => $room['type'],
+                'description' => $room['description'],
+                'price' => $room['price'],
+                'image' => $room['image']
+            ));
+		}
+	}
 }
