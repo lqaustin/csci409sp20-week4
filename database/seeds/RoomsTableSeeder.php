@@ -48,6 +48,5 @@ class RoomsTableSeeder extends Seeder
 				'price' => '599.99',
 				'image' => 'https://placeimg.com/640/480/arch'
             ]
-		]
-    }
+		]    
 }
