@@ -1,4 +1,5 @@
 <?php
+
 //Load Room Model
 use app\Models\Room;
 
@@ -52,7 +53,7 @@ class RoomsTableSeeder extends Seeder
             ],
 		];
 		foreach ($rooms as $room) {
-            Room::create(array(
+            Rooms::create(array(
                 'hotel_id' => $room['hotel_id'],
                 'type' => $room['type'],
                 'description' => $room['description'],
