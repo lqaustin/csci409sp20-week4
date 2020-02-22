@@ -13,7 +13,7 @@ class AddAddressToHotels extends Migration
      */
     public function up()
     {
-        Schema::table('create_hotels_table', function (Blueprint $table) {
+        Schema::table('hotels', function (Blueprint $table) {
             //
 			$table->renameColumn('location', 'address_1');
 			$table->string('address_2')->nullable();
@@ -30,7 +30,7 @@ class AddAddressToHotels extends Migration
      */
     public function down()
     {
-        Schema::table('create_hotels_table', function (Blueprint $table) {
+        Schema::table('hotels', function (Blueprint $table) {
             //
 			$table->renameColumn('address_1', 'location');
             $table->dropColumn(['address_2', 'city', 'state', 'zip']);
