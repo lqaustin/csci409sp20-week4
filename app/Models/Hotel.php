@@ -11,8 +11,7 @@ class Hotel extends Model
 		'name',
 		'address_1',
 		'description',
-		'image'
-		'address_2',
+		'image',
 		'city', 
 		'state',
 		'zip'
