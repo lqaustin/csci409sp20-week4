@@ -1,7 +1,7 @@
 <?php
 
 //Load Room Model
-use app\Models\Room;
+use App\Models\Room;
 
 use Illuminate\Database\Seeder;
 
