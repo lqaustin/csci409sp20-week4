@@ -15,7 +15,7 @@ Route::get('/', function(){
 	return '/ route';
 });
 
-Route::get(‘route’, function() {
+Route::get(‘hotels’, function() {
 	return ‘/hotels route’;
 });
 
