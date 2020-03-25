@@ -15,9 +15,17 @@ Route::get('/', function(){
     return '/ route';
 });
 
-Route::get('hotels', function(){
+
+/*Route::get('hotels', function(){
     return '/hotels route';
-});
+});*/
+
+Route::get(‘/hotels’, ‘HotelController@index’);
+DB::table('reservations')->delete();
+DB::get('reservations/create/{id}','ReservationController@create');
+Route::reservations('reservations','ReservationController');
+
+
 
 Route::prefix('reservations')->group(function () {
     Route::get('/', function () {
@@ -25,6 +33,7 @@ Route::prefix('reservations')->group(function () {
     });
     Route::get('reservations', function () {
         return 'Showing users reservations';
+
     });
     Route::get('reservations/new', function () {
         return 'Showing form to create reservations';
