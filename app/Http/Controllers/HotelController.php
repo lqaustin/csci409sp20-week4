@@ -15,8 +15,8 @@ class HotelController extends Controller
     public function index()
     {
         //
+        $hotels = Hotel::all();
         return view('hotels')->with('hotels', $hotels);
-        $hotels = Hotel::function_to_pull_data();
     }
 
     /**
@@ -24,9 +24,10 @@ class HotelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+        return view('hotelform', ['name' => 'James']);
     }
 
     /**
@@ -38,6 +39,8 @@ class HotelController extends Controller
     public function store(Request $request)
     {
         //
+        Hotel::create([‘field1’ => $request->input(‘form_field_1’), ‘field2’ => $request->input(‘form_field_2’)]);
+        return redirect('/hotels');
     }
 
     /**
@@ -84,4 +87,7 @@ class HotelController extends Controller
     {
         //
     }
+
+
+
 }
