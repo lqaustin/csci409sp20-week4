@@ -16,16 +16,19 @@ Route::get('/', function(){
 });
 
 
+
 /*Route::get('hotels', function(){
     return '/hotels route';
 });*/
 
-Route::get(‘/hotels’, ‘HotelController@index’);
+Route::get('/hotels', 'HotelController@index');;
+
 DB::table('reservations')->delete();
 DB::get('reservations/create/{id}','ReservationController@create');
 Route::reservations('reservations','ReservationController');
 
-
+Route::get('/hotels/create', 'HotelController@create');
+Route::post('/hotels/store', 'HotelController@store');
 
 Route::prefix('reservations')->group(function () {
     Route::get('/', function () {
