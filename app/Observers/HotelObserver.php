@@ -53,7 +53,6 @@ class HotelObserver
     public function updated(Hotel $hotel)
     {
         //
-        $hotel->save;
     }
 
     /**
